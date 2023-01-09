@@ -1,0 +1,22 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <div>
+        <picture>
+            <source
+                srcset="{% static 'portafolio/foto-small.jpg' %}"
+                media="(max-width: 400px)" />
+            <source
+                srcset="{% static 'portafolio/foto-medium.jpg' %}"
+                media="(max-width: 600px)" />
+            <img src="{% static 'portafolio/foto.jpg' %}" alt="foto de perfil" />
+        </picture>
+        <h3>Carlos Roberto</h3>
+        <h3>Pacheco Fajardo</h3>
+    </div>
+    <form method="post">
+        {% csrf_token %} {{form}}
+        <button>Enviar</button>
+    </form>
+{% endblock contenido %}
