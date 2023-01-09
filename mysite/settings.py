@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('modo', '') != 'produccion'
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["paccarlos.up.railway.app", 'localhost']
 CSRF_TRUSTED_ORIGINS=['https://paccarlos.up.railway.app']
 
 # Application definition
@@ -90,7 +90,7 @@ if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'mydatabase',
+            'NAME': 'datos.sqlite3',
         }
     }
 else:
