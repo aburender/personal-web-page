@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk
 DEBUG = os.environ.get('modo', '') != 'produccion'
 
 ALLOWED_HOSTS = ["*"]
+CSRF_COOKIE_DOMAIN = ['paccarlos.up.railway.app']
 
 # Application definition
 
